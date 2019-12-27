@@ -1,0 +1,52 @@
+<head>
+	{% load static %}
+	<link href="{% static 'tinymce/css/prism.css' %}" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+    <link href="{% static 'main/css/materialize.css' %}" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <link href="{% static 'main/css/materialize.css' %}" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+	{% include "main/includes/navbar.html"%}
+	{% include "main/includes/messages.html"%}
+
+	<div class="container">
+		<br>
+		{% block content %}
+		{% endblock %}
+		
+	</div>
+</body>
+<footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12 ">
+                <h5 class="white-text">You've reached the end!</h5>
+                <p class="grey-text text-lighten-4">Contact:xyz@python.com</p>
+              </div>
+              <div class="col l4 offset-l2 s12 ">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">YouTube</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Email</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+            <div class="footer-copyright">
+	            <div class="container">
+		            © 2014 Pencil.website
+		            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+	            </div>
+            </div>
+</footer>
+
+
+<script src="{% static 'tinymce/js/prism.js' %}"></script>
+<script>M.AutoInit();</script>

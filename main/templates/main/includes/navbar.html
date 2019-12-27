@@ -1,0 +1,16 @@
+<nav>
+    <div class="nav-wrapper container">
+      <a href="/" class="brand-logo"><img class="img-responsive" style="width: 50px;height: 50px;margin-top: 5px" src="static/main/img/pen.png"/>Pencil</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        {% if user.is_authenticated %}
+        	<li><a href="/account">{{user.username}}</a></li>
+        	<li><a href="/logout">Logout</a></li>
+        {% else %}
+          	<li><a href="/register">Register</a></li>
+            <li><a href="/login">Login</a></li>
+        {% endif %}
+
+      </ul>
+    </div>
+  </nav>
